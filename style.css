@@ -172,8 +172,8 @@ header {
 .about p {
   font-size: 1.2rem;
   max-width: 800px;
-  margin: 0 auto;
-  color: #666666;
+  margin: 0 auto 2rem;
+  color: #666;
 }
 
 .products {
@@ -242,7 +242,7 @@ transform: translateY(-5px);
   margin-bottom: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  color: #66666;
+  color: #666;
 }
 
 .maps {
