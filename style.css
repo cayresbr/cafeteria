@@ -5,20 +5,21 @@
 }
 
 .fade-in-section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
+  overflow-x: hidden;
 }
 
 .container {
@@ -43,6 +44,9 @@ header {
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,6 +76,49 @@ header {
 
 .nav-links a:hover {
   color: burlywood;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: burlywood;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+  z-index: 900;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .hero {
@@ -168,6 +215,11 @@ transform: translateY(-5px);
   margin-bottom: 1rem;
 }
 
+.product-icon img {
+  width: 70px;
+  
+}
+
 .price {
   font-size: 1.5rem;
   font-weight: bold;
@@ -218,6 +270,47 @@ footer {
   .products-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+  /* Mostra hambúrguer no mobile */
+  .hamburger { display: flex; }
+
+  /* Menu vira drawer lateral */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    padding: 96px 24px 24px;
+    flex-direction: column;
+    gap: 0;
+    background: #2c1810;
+    border-right: 1px solid #333;
+    transition: left .35s ease; /* transição da esquerda -> direita */
+    z-index: 950;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #2c2c2c;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px 0;
+    font-size: 1.05rem;
+    color: burlywood;
+  }
+
+  .nav-links.active {
+    left: 0; /* abre vindo da esquerda */
+  }
+}
+
+/* Opcional: rolagem suave entre seções */
+html {
+  scroll-behavior: smooth;
+}
 }
 
 @media screen and (max-width: 480px) {

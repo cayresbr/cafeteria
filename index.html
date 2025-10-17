@@ -7,14 +7,24 @@
   <title>Java Coffee</title>
 </head>
 <body>
+
+  <div class="overlay" id="overlay"></div>
+
   <header>
     <nav class="navbar">
       <div class="logo">Java Coffee</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li ><a href="#location">Location</a></li>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#home" class="menu-link">Home</a></li>
+        <li><a href="#about" class="menu-link">About</a></li>
+        <li><a href="#products" class="menu-link">Products</a></li>
+        <li><a href="#location" class="menu-link">Location</a></li>
       </ul>
     </nav>
   </header>
@@ -40,42 +50,81 @@
         <h2>Products</h2>
         <div class="products-grid">
           <article class="products-card">
-            <div class="product-icon">☕</div>
+            <div class="product-icon">
+              <img src="assets/1.png" alt="">
+            </div>
             <h3>Espresso</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <span class="price">$5,00</span>
           </article>
 
           <article class="products-card">
-            <div class="product-icon">🥤</div>
+            <div class="product-icon">
+              <img src="assets/2.png" alt="">  
+            </div>
             <h3>Iced Coffee</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <span class="price">$5,00</span>
           </article>
 
           <article class="products-card">
-            <div class="product-icon">🧊</div>
+            <div class="product-icon">
+              <img src="assets/3.png" alt="">
+            </div>
             <h3>Iced Latte</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <span class="price">$5,00</span>
           </article>
 
           <article class="products-card">
-            <div class="product-icon">🧊</div>
+            <div class="product-icon">
+              <img src="assets/4.png" alt="">
+            </div>
             <h3>Iced Latte</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <span class="price">$5,00</span>
           </article>
 
           <article class="products-card">
-            <div class="product-icon">🧊</div>
+            <div class="product-icon">
+              <img src="assets/5.png" alt="">
+            </div>
             <h3>Iced Latte</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <span class="price">$5,00</span>
           </article>
 
           <article class="products-card">
-            <div class="product-icon">🧊</div>
+            <div class="product-icon">
+              <img src="assets/6.png" alt="">
+            </div>
+            <h3>Iced Latte</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <span class="price">$5,00</span>
+          </article>
+          
+          <article class="products-card">
+            <div class="product-icon">
+              <img src="assets/7.png" alt="">
+            </div>
+            <h3>Iced Latte</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <span class="price">$5,00</span>
+          </article>
+
+          <article class="products-card">
+            <div class="product-icon">
+              <img src="assets/8.png" alt="">
+            </div>
+            <h3>Iced Latte</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <span class="price">$5,00</span>
+          </article>
+
+          <article class="products-card">
+            <div class="product-icon">
+              <img src="assets/9.png" alt="">
+            </div>
             <h3>Iced Latte</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <span class="price">$5,00</span>
@@ -90,7 +139,7 @@
         <div class="contact-info">
           <p>Address: 123 Main Street, City, Country</p>
           <p>Phone: (123) 456-7890</p>
-          <p>Email: 0x8cI@example.com</p>
+          <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f1f57174c666f4a574e425f434a014c4042">[email&#160;protected]</a></p>
           <p>Opening Hours: Monday to Friday, 9am to 5pm</p>
           <p>Follow us on Instagram: @javacoffee</p>
         </div>
@@ -103,7 +152,7 @@
   <footer class="footer">
     <p>&copy; 2023 Java Coffee. All rights reserved.</p>
   </footer>
-  <script type="text/javascript" src="https://api.abacus.ai/api/v0/getChatBotWidgetSDKLink?externalApplicationId=142880b150"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://api.abacus.ai/api/v0/getChatBotWidgetSDKLink?externalApplicationId=142880b150"></script>
 
   <script src="scripts.js"></script>
 </body>
