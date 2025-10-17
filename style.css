@@ -44,8 +44,7 @@ header {
 }
 
 .navbar {
-  position: sticky;
-  top: 0;
+  
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -172,10 +171,9 @@ header {
 
 .about p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  color: #66666;
+  color: #666666;
 }
 
 .products {
@@ -311,7 +309,7 @@ footer {
 html {
   scroll-behavior: smooth;
 }
-}
+
 
 @media screen and (max-width: 480px) {
   .nav-links {
